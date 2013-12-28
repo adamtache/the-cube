@@ -1,29 +1,15 @@
-<div class="sidebar">
-	<ul>
-		<div class="logo">
-			<%= image_tag "logo.svg" %>
-		</div>
-		<li class="active">Home</li>
-		<li>About Us</li>
-		<li>Join Us</li>
-		<li>Gallery</li>
-		<li>Event Calendar</li>
-		<li>Contact Us</li>
-		<div class="social">
-			
-		</div>
-	</ul>
-</div>
+<%= render "sidebar" %>
+
 <div class="content">
-	<div class="header-image">
-		<%= image_tag "header-image-1.png" %>
-	</div>
+
+	<%= render "header_image" %>
+
 	<div class="content-posts">
 		<div class="content-post">
 			<div class="pinned">Pinned Post</div>
 			<div class="post-title">
 				<img src="https://secure.gravatar.com/avatar/1384686ecd2b5e4ea72972f843cd0811?size=800">
-				The Cube's Rush 2014 Events Calendar Is Out!
+				<h1>The Cube's Rush 2014 Events Calendar Is Out!</h1>
 			</div>
 			<div class="post-author-time">
 				Ashley Qian | December 24, 2013
@@ -36,7 +22,7 @@
 		<div class="content-post">
 			<div class="post-title">
 				<img src="https://secure.gravatar.com/avatar/1384686ecd2b5e4ea72972f843cd0811?size=800">
-				The Cube’s Rush Process: Demystified
+				<h1>The Cube’s Rush Process: Demystified</h1>
 			</div>
 			<div class="post-author-time">
 				Ashley Qian | December 26, 2013

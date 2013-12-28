@@ -1,20 +1,40 @@
+$dark-blue: #2d3587;
+$dark-grey: #4d4d4d;
+$grey: #cccccc;
+$light-blue: #599fcf;
+$light-grey: #f2f2f2;
+
 html, body {
 	height: 100%;
 	font-family: 'Open Sans', sans-serif;
-	color: #4d4d4d;
+	color: $dark-grey;
+}
+
+h1 {
+	color: $dark-grey;
+	font-size: 20px;
+	font-weight: 800;
+	margin-bottom: 10px;
+}
+
+ol {
+	li {
+		font-size: 14px;
+		font-weight: 100;
+	}
 }
 
 .sidebar {
 	height: 100%;
 	min-width: 15%;
 	float: left;
-	border-right: 1px solid #cccccc;
+	border-right: 1px solid $grey;
 	ul {
 		margin: 0 auto;
 		padding: 0;
 		list-style-type: none;
 		.logo {
-			border-bottom: 1px solid #cccccc;
+			border-bottom: 1px solid $grey;
 			padding: 10px 0;
 			img {
 				display: block;
@@ -24,7 +44,7 @@ html, body {
 		li {
 			padding: 20px 40px;
 			margin: 0 auto;
-			border-bottom: 1px solid #cccccc;
+			border-bottom: 1px solid $grey;
 			text-decoration: none;
 			font-size: 16px;
 			font-weight: 800;
@@ -32,9 +52,24 @@ html, body {
 			
 		}
 		.active {
-			background-color: #2d3587;
+			background-color: $dark-blue;
 			color: white;
 		}
+	}
+}
+
+.submenu {
+	li {
+		font-weight: 700 !important;
+		font-style: italic;
+		font-size: 14px !important;
+		padding: 10px 40px !important;
+		background-color: $light-grey;
+		color: $grey !important;
+	}
+	.active {
+		background-color: $grey !important;
+		color: $dark-grey !important;
 	}
 }
 
@@ -43,28 +78,29 @@ html, body {
 	height: 100%;
 	.header-image {
 		height: 221px;
-		border-bottom: 1px solid #cccccc;
+		border-bottom: 1px solid $grey;
 		overflow: hidden;
 		img {
-			width: 100%;
+			min-width: 100%;
+			min-height: 100%;
 		}
 	}
 }
 
 .content-posts {
-	width: 80%;
+	width: 75%;
 	float: left;
-	border-right: 1px solid #cccccc;
+	border-right: 1px solid $grey;
 	.content-post {
 		padding: 40px;
-		border-bottom: 1px solid #cccccc;
+		border-bottom: 1px solid $grey;
 		position: relative;
 		.pinned {
 			position: absolute;
 			top: 0;
 			left: 0;
-			color: #4d4d4d;
-			background-color: #cccccc;
+			color: $dark-grey;
+			background-color: $grey;
 			padding: 5px;
 			font-size: 10px;
 			text-transform: uppercase;
@@ -73,15 +109,15 @@ html, body {
 			img {
 				float: left;
 				margin-right: 20px;
+				margin-bottom: 10px;
 				height: 100px;
 				width: 100px;
 			}
-			color: #4d4d4d;
-			font-size: 20px;
-			font-weight: 800;
-			margin-bottom: 10px;
 		}
 		.post-author-time {
+			img {
+				display: none;
+			}
 			font-weight: 100;
 			font-size: 12px;
 			font-style: italic;
@@ -93,24 +129,25 @@ html, body {
 			img {
 				max-width:100%;
 				max-height:100%;
+				margin-top: 10px;
 			}
 		}
 	}
 }
 
 .content-sidebar {
-	width: 20%;
+	width: 25%;
 	float: left;
 	.sidebar-widget {
-		border-bottom: 1px solid #cccccc;
+		border-bottom: 1px solid $grey;
 		.widget-title {
-			background-color: #4d4d4d;
+			background-color: $dark-grey;
 			color: white;
 			font-size: 16px;
 			font-weight: 800;
 			text-transform: uppercase;
 			padding: 20px;
-			border-bottom: 1px solid #cccccc;
+			border-bottom: 1px solid $grey;
 		}
 		.widget-body {
 			padding: 20px;
@@ -136,7 +173,7 @@ html, body {
 
 		}
 		button {
-			background-color: #599fcf;
+			background-color: $light-blue;
 			border: none;
 			color: white;
 			font-weight: 700;
@@ -144,5 +181,71 @@ html, body {
 			padding: 10px;
 			margin-top: 10px;
 		}
+	}
+}
+
+.content-mission {
+	padding: 40px;
+	border-bottom: 1px solid $grey;
+	.mission-hero {
+		background-color: $light-blue;
+		color: white;
+		font-weight: 100;
+		font-size: 24px;
+		padding: 20px;
+		line-height: 1.5em;
+		margin-bottom: 40px;
+	}
+	
+}
+
+@media all and (max-width: 768px) and (min-width: 320px) {
+	.sidebar {
+		display: none;
+	}
+	.content-sidebar {
+		display: none;
+		width: 0;
+	}
+	.content-posts {
+		width: 100%;
+	}
+	.content {
+		.header-image {
+			display: relative;
+			button {
+				position: absolute;
+				z-index: 10;
+				opacity: 0.75;
+				margin-left: 5px;
+				.icon-bar {
+					background-color: white; 
+				}
+			}
+			button:hover {
+				opacity: 1;
+			}
+			img {
+				margin-left: -33%;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 400px) and (min-width: 320px) {
+	.post-title {
+		img {
+			display: none;
+		}
+	}
+}
+
+@media all and (max-width: 992px) and (min-width: 768px) {
+	.content-sidebar {
+		display: none;
+		width: 0;
+	}
+	.content-posts {
+		width: 100%;
 	}
 }
