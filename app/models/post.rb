@@ -17,4 +17,15 @@ class Post < ActiveRecord::Base
 		self.heading = self.heading.titleize
 	end
 
+	def tags
+		tags = []
+		self.members.each do |m|
+			tags << {:name => m.full_name, :url => member_path(c)}
+		end
+		self.companies.each do |c|
+			tags << {:name => c.name, :url => company_path(c)}
+		end
+		return tags
+	end
+
 end
