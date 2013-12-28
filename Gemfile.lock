@@ -48,6 +48,8 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
+    bootstrap-sass (3.0.3.0)
+      sass (~> 3.2)
     bourbon (3.1.8)
       sass (>= 3.2.0)
       thor
@@ -163,6 +165,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  bootstrap-sass (~> 3.0.3.0)
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
