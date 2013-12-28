@@ -11,6 +11,7 @@ ActiveAdmin.register Post do
 	# which is set automatically and shouldn't be in the form
 	form do |f|
 		f.inputs "Details" do
+			f.input :pinned
 			f.input :heading
 			f.input :content
 			f.input :admin_user_id, :as => :hidden, :value => current_admin_user.id
@@ -21,6 +22,9 @@ ActiveAdmin.register Post do
 	end
 
 	index do
+		column :pinned do |p|
+			"&#x2713;".html_safe if p.pinned?
+		end
 		column :heading
 		column :content
 		column :author do |p|
@@ -38,6 +42,9 @@ ActiveAdmin.register Post do
 
 	show do |p|
 		attributes_table do
+			row :pinned do
+				"&#x2713;".html_safe if p.pinned?
+			end
 			row :heading
 			row :content
 			row :author do
