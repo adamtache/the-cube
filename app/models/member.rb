@@ -1,6 +1,10 @@
 require 'digest/md5' # used for hashing the email
 
 class Member < ActiveRecord::Base
+	# == relations
+	has_and_belongs_to_many :companies
+	has_and_belongs_to_many :posts
+
 	# == validations
 	validates :first_name, presence: true
 	validates :last_name, presence: true

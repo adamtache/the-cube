@@ -1,4 +1,8 @@
 class Company < ActiveRecord::Base
+	# == relations
+	has_and_belongs_to_many :members
+	has_and_belongs_to_many :posts
+
 	# == validations
 	validates :name, presence: true
 	validates :blurb, presence: true

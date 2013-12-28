@@ -1,7 +1,9 @@
 class Post < ActiveRecord::Base
-
 	# == relations
 	belongs_to :author, :class_name => "AdminUser", :foreign_key => "admin_user_id"
+	has_and_belongs_to_many :companies
+	has_and_belongs_to_many :members
+	accepts_nested_attributes_for :companies
 
 	# == validations
 	validates :heading, presence: true
