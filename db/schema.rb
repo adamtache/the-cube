@@ -96,7 +96,7 @@ ActiveRecord::Schema.define(version: 20131228215929) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "admin_user_id"
-    t.boolean  "pinned"
+    t.boolean  "pinned",        default: false
   end
 
 end
