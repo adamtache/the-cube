@@ -34,7 +34,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# activeadmin for administrator functions: sign in, add/edit/delete updates on the home page
+# activeadmin for administrator functions: sign in, add/edit/delete posts on the home page
 # we need to use the version straight from github in order to get rails 4 support
 gem 'activeadmin', github: 'gregbell/active_admin'
 

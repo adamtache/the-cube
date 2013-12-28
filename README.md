@@ -25,5 +25,5 @@ Password: 205alexander
 
 We can create additional admin users as needed.
 
-The admin interface allows you to add/edit/delete updates, which will probably appear on our homepage.
+The admin interface allows you to add/edit/delete posts, which will probably appear on our homepage.
 This functionality already works!

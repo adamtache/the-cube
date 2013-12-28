@@ -1,4 +1,4 @@
-ActiveAdmin.register Update do
+ActiveAdmin.register Post do
 
 	# See permitted parameters documentation:
 	# https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -19,19 +19,19 @@ ActiveAdmin.register Update do
 	index do
 		column :heading
 		column :content
-		column :author do |u|
-			link_to u.author.full_name, admin_admin_user_path(u.author) if u.author && u.author.full_name
+		column :author do |p|
+			link_to p.author.full_name, admin_admin_user_path(p.author) if p.author && p.author.full_name
 		end
 		column :created_at
 		default_actions
 	end
 
-	show do |u|
+	show do |p|
       attributes_table do
         row :heading
         row :content
         row :author do
-        	link_to u.author.full_name, admin_admin_user_path(u.author) if u.author && u.author.full_name
+        	link_to p.author.full_name, admin_admin_user_path(p.author) if p.author && p.author.full_name
         end
       end
     end

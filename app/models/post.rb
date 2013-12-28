@@ -1,4 +1,4 @@
-class Update < ActiveRecord::Base
+class Post < ActiveRecord::Base
 
 	# == relations
 	belongs_to :author, :class_name => "AdminUser", :foreign_key => "admin_user_id"
