@@ -1,0 +1,148 @@
+html, body {
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	color: #4d4d4d;
+}
+
+.sidebar {
+	height: 100%;
+	min-width: 15%;
+	float: left;
+	border-right: 1px solid #cccccc;
+	ul {
+		margin: 0 auto;
+		padding: 0;
+		list-style-type: none;
+		.logo {
+			border-bottom: 1px solid #cccccc;
+			padding: 10px 0;
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		li {
+			padding: 20px 40px;
+			margin: 0 auto;
+			border-bottom: 1px solid #cccccc;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: 800;
+			text-transform: uppercase;
+			
+		}
+		.active {
+			background-color: #2d3587;
+			color: white;
+		}
+	}
+}
+
+.content {
+	overflow-y: scroll;
+	height: 100%;
+	.header-image {
+		height: 221px;
+		border-bottom: 1px solid #cccccc;
+		overflow: hidden;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.content-posts {
+	width: 80%;
+	float: left;
+	border-right: 1px solid #cccccc;
+	.content-post {
+		padding: 40px;
+		border-bottom: 1px solid #cccccc;
+		position: relative;
+		.pinned {
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: #4d4d4d;
+			background-color: #cccccc;
+			padding: 5px;
+			font-size: 10px;
+			text-transform: uppercase;
+		}
+		.post-title {
+			img {
+				float: left;
+				margin-right: 20px;
+				height: 100px;
+				width: 100px;
+			}
+			color: #4d4d4d;
+			font-size: 20px;
+			font-weight: 800;
+			margin-bottom: 10px;
+		}
+		.post-author-time {
+			font-weight: 100;
+			font-size: 12px;
+			font-style: italic;
+			margin-bottom: 10px;
+		}
+		.post-body {
+			font-size: 14px;
+			font-weight: 100;
+			img {
+				max-width:100%;
+				max-height:100%;
+			}
+		}
+	}
+}
+
+.content-sidebar {
+	width: 20%;
+	float: left;
+	.sidebar-widget {
+		border-bottom: 1px solid #cccccc;
+		.widget-title {
+			background-color: #4d4d4d;
+			color: white;
+			font-size: 16px;
+			font-weight: 800;
+			text-transform: uppercase;
+			padding: 20px;
+			border-bottom: 1px solid #cccccc;
+		}
+		.widget-body {
+			padding: 20px;
+			.body-event {
+				padding-bottom: 20px;
+				.event-title {
+					font-weight: 800;
+					font-size: 14px;
+				}
+				.event-time-date {
+					font-weight: 100;
+					font-size: 12px;
+				}
+				.event-location {
+					font-weight: 100;
+					font-size: 12px;
+				}
+			}
+			.body-text {
+				font-weight: 100;
+				font-size: 14px;
+			}
+
+		}
+		button {
+			background-color: #599fcf;
+			border: none;
+			color: white;
+			font-weight: 700;
+			font-size: 14px;
+			padding: 10px;
+			margin-top: 10px;
+		}
+	}
+}
