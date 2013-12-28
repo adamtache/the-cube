@@ -21,7 +21,7 @@ class Member < ActiveRecord::Base
 
 	# a convenience method for getting the member's full name
 	def full_name
-		self.first_name + self.last_name
+		self.first_name + " " + self.last_name
 	end
 
 	# returns a url which can be used as the src attribute in an img tag

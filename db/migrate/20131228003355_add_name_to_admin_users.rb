@@ -1,0 +1,8 @@
+class AddNameToAdminUsers < ActiveRecord::Migration
+	def change
+		change_table :admin_users do |t|
+			t.string :first_name
+			t.string :last_name
+		end
+	end
+end
