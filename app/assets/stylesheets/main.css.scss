@@ -45,15 +45,28 @@ ol {
 			padding: 20px 40px;
 			margin: 0 auto;
 			border-bottom: 1px solid $grey;
-			text-decoration: none;
 			font-size: 16px;
 			font-weight: 800;
 			text-transform: uppercase;
-			
+			a {
+				text-decoration: none;
+				color: $dark-blue;
+				&:hover {
+					// this could be changed, but we def. want to do something
+					// here to hint at the fact that it's a link
+					color: $light-blue;
+				}
+			}
 		}
-		.active {
+		.active, .active > a {
 			background-color: $dark-blue;
 			color: white;
+			text-decoration: none;
+			// fix for light on dark text on non-retina displays
+			-webkit-font-smoothing: antialiased;
+			&:hover {
+				color: white;
+			}
 		}
 	}
 }

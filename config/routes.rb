@@ -9,6 +9,10 @@ TheCube::Application.routes.draw do
   
   # main pages
   get "about", to: "main#about"
+  get "join", to: "main#join"
+  get "gallery", to: "main#gallery"
+  get "calendar", to: "main#calendar"
+  get "contact", to: "main#contact"
 
   # member and company profiles
   resources :companies, :only => [:index, :show]
