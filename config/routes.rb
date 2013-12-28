@@ -1,4 +1,5 @@
 TheCube::Application.routes.draw do
+
   # routes injected by other libraries
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

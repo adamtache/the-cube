@@ -1,0 +1,15 @@
+<!-- 
+	This should be a small card-like element that shows some basic info
+	about each member.
+ -->
+<div class="content-member card">
+	<div class="member-image">
+		<%= image_tag member.profile_image_url(200) %>
+	</div>
+	<div class="member-name">
+		<h3><%= link_to member.full_name, member %></h3>
+	</div>
+	<div class="member-info">
+		<strong>Companies:</strong> <%= (member.companies.map{|c| link_to c.name, c}).join(", ").html_safe %>
+	</div>
+</div>

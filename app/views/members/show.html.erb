@@ -1,1 +1,19 @@
-<h1>This is the Show page for a member (a member profile)</h1>
+<div class="content-member">
+	<div class="member-image">
+		<%= image_tag @member.profile_image_url(200) %>
+	</div>
+	<div class="member-name">
+		<h1><%= @member.full_name %></h1>
+	</div>
+	<div class="member-info">
+		<strong>Email:</strong> <%= @member.email %>
+		<br/>
+		<strong>Companies:</strong> <%= (@member.companies.map{|c| link_to c.name, c}).join(", ").html_safe %>
+	</div>
+	<div class="member-posts">
+		<h2>Latest News</h2>
+		<% @member.posts.each do |p| %>
+			<%= render p %>
+		<% end %>
+	</div>
+</div>

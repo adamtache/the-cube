@@ -1,1 +1,5 @@
-<h1>This is the Index page for members</h1>
+<h1>Members:</h1>
+
+<% @members.each do |m| %>
+	<%= render m %>
+<% end %>
