@@ -12,6 +12,9 @@ class Post < ActiveRecord::Base
 	# == callbacks
 	before_save :auto_titleize
 
+	# == scopes
+	default_scope order("pinned desc, updated_at desc")
+
 	# == methods
 	def auto_titleize
 		self.heading = self.heading.titleize
