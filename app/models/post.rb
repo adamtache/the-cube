@@ -20,10 +20,10 @@ class Post < ActiveRecord::Base
 	def tags
 		tags = []
 		self.members.each do |m|
-			tags << {:name => m.full_name, :url => member_path(c)}
+			tags << {:name => m.full_name, :url => Rails.application.routes.url_helpers.member_path(m)}
 		end
 		self.companies.each do |c|
-			tags << {:name => c.name, :url => company_path(c)}
+			tags << {:name => c.name, :url => Rails.application.routes.url_helpers.company_path(c)}
 		end
 		return tags
 	end
