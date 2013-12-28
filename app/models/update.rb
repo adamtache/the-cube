@@ -1,8 +1,12 @@
 class Update < ActiveRecord::Base
 
+	# == relations
+	belongs_to :author, :class_name => "AdminUser", :foreign_key => "admin_user_id"
+
 	# == validations
 	validates :heading, presence: true
 	validates :content, presence: true
+	validates :author, presence: true
 
 	# == callbacks
 	before_save :auto_titleize
@@ -11,4 +15,5 @@ class Update < ActiveRecord::Base
 	def auto_titleize
 		self.heading = self.heading.titleize
 	end
+
 end
