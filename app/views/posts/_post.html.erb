@@ -1,0 +1,22 @@
+<div class="content-post card">
+<div class="post-title">
+		<img src="<%= post.author.profile_image_url(200) %>">
+		<h1><%= post.heading %></h1>
+	</div>
+	<div class="post-author-time">
+		<%= post.author.full_name %> | <%= post.created_at %>
+	</div>
+	<div class="post-body">
+		<%= post.content %>
+	</div>
+	<div class="post-tags">
+		<span>Tags: </span>
+		<% post.tags.each do |t| %>
+			<%= link_to t[:url] do %>
+				<span class="label label-primary post-tag">
+					<%= t[:name] %>
+				</span>
+			<% end %>
+		<% end %> 
+	</div>
+</div>

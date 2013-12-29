@@ -1,6 +1,10 @@
 require 'digest/md5' # used for hashing the email
 
 class Member < ActiveRecord::Base
+	# == relations
+	has_and_belongs_to_many :companies
+	has_and_belongs_to_many :posts
+
 	# == validations
 	validates :first_name, presence: true
 	validates :last_name, presence: true
@@ -27,7 +31,7 @@ class Member < ActiveRecord::Base
 	# returns a url which can be used as the src attribute in an img tag
 	# powered by gravatar
 	# http://en.gravatar.com/site/implement/images/ruby/
-	def profile_image_url
-		"http://www.gravatar.com/avatar/#{self.email_hash}"
+	def profile_image_url(size=400)
+		"http://www.gravatar.com/avatar/#{self.email_hash}?size=#{size}"
 	end
 end

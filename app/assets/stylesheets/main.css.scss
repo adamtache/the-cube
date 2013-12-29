@@ -45,19 +45,29 @@ ol {
 			padding: 20px 40px;
 			margin: 0 auto;
 			border-bottom: 1px solid $grey;
-			text-decoration: none;
 			a {
+				text-decoration: none;
+				color: $dark-blue;
 				font-size: 16px;
 				font-weight: 800;
 				text-transform: uppercase;
-				color: $dark-grey;
-				text-decoration: none;
+				&:hover {
+					// this could be changed, but we def. want to do something
+					// here to hint at the fact that it's a link
+					color: $light-blue;
+				}
 			}
 		}
-		.active {
+		.active, .active > a {
 			background-color: $dark-blue;
 			a {
 				color: white;
+				text-decoration: none;
+				-webkit-font-smoothing: antialiased;
+				color: white;
+			}
+			:hover {
+
 			}
 		}
 	}
@@ -162,7 +172,7 @@ ol {
 		.widget-body {
 			padding: 20px;
 		}
-		#mc_embed_signup{
+		#mc_embed_signup {
 			background: white;
 			clear: left;
 			font-size: 14px;

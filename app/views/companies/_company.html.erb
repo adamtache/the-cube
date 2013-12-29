@@ -1,0 +1,19 @@
+<!-- 
+	This should be a small card-like element that shows some basic info
+	about each company.
+ -->
+<div class="content-company card">
+	<div class="company-name">
+		<h3><%= link_to company.name, company %></h3>
+	</div>
+	<div class="company-blurb">
+		<p>
+			<%= company.blurb %>
+		</p>
+	</div>
+	<div class="company-info">
+		<strong>Founded:</strong> <%= company.founded_at %>
+		<br/>
+		<strong>Members:</strong> <%= (company.members.map{|m| link_to m.full_name, m}).join(", ").html_safe %>
+	</div>
+</div>

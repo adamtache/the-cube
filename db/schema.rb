@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131228013211) do
+ActiveRecord::Schema.define(version: 20131228221200) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -43,10 +43,35 @@ ActiveRecord::Schema.define(version: 20131228013211) do
     t.datetime "updated_at"
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "email_hash"
   end
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+
+  create_table "companies", force: true do |t|
+    t.string   "name"
+    t.date     "founded_at"
+    t.text     "blurb"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "companies_members", force: true do |t|
+    t.integer "company_id"
+    t.integer "member_id"
+  end
+
+  add_index "companies_members", ["company_id"], name: "index_companies_members_on_company_id"
+  add_index "companies_members", ["member_id"], name: "index_companies_members_on_member_id"
+
+  create_table "companies_posts", force: true do |t|
+    t.integer "company_id"
+    t.integer "post_id"
+  end
+
+  add_index "companies_posts", ["company_id"], name: "index_companies_posts_on_company_id"
+  add_index "companies_posts", ["post_id"], name: "index_companies_posts_on_post_id"
 
   create_table "members", force: true do |t|
     t.string   "email"
@@ -57,12 +82,23 @@ ActiveRecord::Schema.define(version: 20131228013211) do
     t.datetime "updated_at"
   end
 
-  create_table "updates", force: true do |t|
+  create_table "members_posts", force: true do |t|
+    t.integer "member_id"
+    t.integer "post_id"
+  end
+
+  add_index "members_posts", ["member_id"], name: "index_members_posts_on_member_id"
+  add_index "members_posts", ["post_id"], name: "index_members_posts_on_post_id"
+
+  create_table "posts", force: true do |t|
     t.string   "heading"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "admin_user_id"
+    t.boolean  "pinned",        default: false
   end
+
+  add_index "posts", ["admin_user_id"], name: "index_posts_on_admin_user_id"
 
 end

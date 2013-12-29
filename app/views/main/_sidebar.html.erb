@@ -1,10 +1,13 @@
 <div class="sidebar">
 	<ul>
 		<div class="logo">
-			<%= image_tag "logo.svg" %>
+			<%= link_to "/" do %>
+				<%= image_tag "logo.svg" %>
+			<% end %>
 		</div>
-		<li><a href="/">Home</a></li>
-		<li class="active"><a href="/about">About Us</a></li>
+		<li class="<%= 'active' if params[:action] == 'home' %>"><%= link_to "Home", "/" %></li>
+		<li class="<%= 'active' if params[:action] == 'about' %>"><%= link_to "About Us", about_path %></li>
+		<% if  params[:action] == 'about' %>
 		<ul class="submenu">
 			<li class="active"><a href="">Mission</a></li>
 			<li><a href="">Members</a></li>
@@ -12,8 +15,10 @@
 			<li><a href="">Alumni</a></li>
 			<li><a href="">Special Thanks</a></li>
 		</ul>
-		<li><a href="">Join Us</a></li>
-		<li><a href="">Event Calendar</a></li>
+		<% end %>
+		<li class="<%= 'active' if params[:action] == 'join' %>"><%= link_to "Join Us", join_path %></li>
+		<li class="<%= 'active' if params[:action] == 'calendar' %>"><%= link_to "Event Calendar", calendar_path %></li>
+		<li class="<%= 'active' if params[:action] == 'contact' %>"><%= link_to "Contact Us", contact_path %></li>
 		<div class="social">
 		</div>
 	</ul>

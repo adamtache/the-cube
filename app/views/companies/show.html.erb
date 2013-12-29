@@ -1,0 +1,21 @@
+<div class="content-company">
+	<div class="company-name">
+		<h1><%= @company.name %></h1>
+	</div>
+	<div class="company-blurb">
+		<p>
+			<%= @company.blurb %>
+		</p>
+	</div>
+	<div class="company-info">
+		<strong>Founded:</strong> <%= @company.founded_at %>
+		<br/>
+		<strong>Members:</strong> <%= (@company.members.map{|m| link_to m.full_name, m}).join(", ").html_safe %>
+	</div>
+	<div class="company-posts">
+		<h2>Latest News</h2>
+		<% @company.posts.each do |p| %>
+			<%= render p %>
+		<% end %>
+	</div>
+</div>
