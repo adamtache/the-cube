@@ -46,35 +46,45 @@ ol {
 			margin: 0 auto;
 			border-bottom: 1px solid $grey;
 			text-decoration: none;
-			font-size: 16px;
-			font-weight: 800;
-			text-transform: uppercase;
-			
+			a {
+				font-size: 16px;
+				font-weight: 800;
+				text-transform: uppercase;
+				color: $dark-grey;
+				text-decoration: none;
+			}
 		}
 		.active {
 			background-color: $dark-blue;
-			color: white;
+			a {
+				color: white;
+			}
 		}
 	}
 }
 
 .submenu {
 	li {
-		font-weight: 700 !important;
-		font-style: italic;
-		font-size: 14px !important;
-		padding: 10px 40px !important;
+		padding: 5px 40px !important;
 		background-color: $light-grey;
-		color: $grey !important;
+		border-bottom: 1px solid $grey;
+		a {
+			color: #999999 !important;
+			font-weight: 700 !important;
+			font-style: italic;
+			font-size: 12px !important;
+		}
 	}
 	.active {
 		background-color: $grey !important;
-		color: $dark-grey !important;
+		a {
+			color: $dark-grey !important;
+		}
 	}
 }
 
 .content {
-	overflow-y: scroll;
+	overflow: scroll;
 	height: 100%;
 	.header-image {
 		height: 221px;
@@ -151,35 +161,34 @@ ol {
 		}
 		.widget-body {
 			padding: 20px;
-			.body-event {
-				padding-bottom: 20px;
-				.event-title {
-					font-weight: 800;
-					font-size: 14px;
-				}
-				.event-time-date {
-					font-weight: 100;
-					font-size: 12px;
-				}
-				.event-location {
-					font-weight: 100;
-					font-size: 12px;
-				}
-			}
-			.body-text {
-				font-weight: 100;
-				font-size: 14px;
-			}
-
 		}
-		button {
-			background-color: $light-blue;
-			border: none;
-			color: white;
-			font-weight: 700;
+		#mc_embed_signup{
+			background: white;
+			clear: left;
 			font-size: 14px;
-			padding: 10px;
-			margin-top: 10px;
+			font-weight: 100;
+			input {
+				border-radius: 0;
+			}
+			.asterisk {
+				font-size: 14px;
+				color: $light-blue;
+				top: 0;
+			}
+			.button {
+				background-color: $light-blue !important;
+				border: none !important;
+				color: white;
+				font-weight: 700;
+				font-size: 14px;
+				padding: 0px 10px 10px 10px;
+				margin-top: 10px;
+				border-radius: 0;
+				text-shadow: none;
+				background-image: none;
+				font-family: 'Open Sans', sans-serif;
+				margin: 10px 0;
+			}
 		}
 	}
 }
@@ -196,7 +205,25 @@ ol {
 		line-height: 1.5em;
 		margin-bottom: 40px;
 	}
-	
+}
+
+.content-members {
+	.content-member {
+		padding: 40px;
+		.member-photo {
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+		.member-profile {
+			padding: 20px;
+			margin-top: -5px;
+			border-bottom: 1px solid $grey;
+			border-left: 1px solid $grey;
+			border-right: 1px solid $grey;
+		}
+	}
 }
 
 @media all and (max-width: 768px) and (min-width: 320px) {
