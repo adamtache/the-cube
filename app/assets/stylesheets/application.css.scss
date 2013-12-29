@@ -1,0 +1,13 @@
+/*
+	Use a custom application.css.scss file so wa can control the load order.
+	IMPORTANT: any new sass files need to be added here.
+*/
+
+@import "bootstrap";
+@import "colors";
+@import "main";
+@import "posts";
+@import "about";
+@import "join";
+@import "calendar";
+@import "contact";
