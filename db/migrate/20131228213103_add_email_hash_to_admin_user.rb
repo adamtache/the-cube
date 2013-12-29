@@ -3,7 +3,7 @@ class AddEmailHashToAdminUser < ActiveRecord::Migration
 		add_column :admin_users, :email_hash, :string
 		# create email hashes for any admin users that might not have them
 		AdminUser.all.each do |u|
-			u.compile_email_hash
+			u.compile_email_hash!
 		end
 	end
 end

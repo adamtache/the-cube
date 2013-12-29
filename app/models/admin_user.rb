@@ -16,6 +16,11 @@ class AdminUser < ActiveRecord::Base
 		self.email_hash = Digest::MD5.hexdigest(self.email)
 	end
 
+	def compile_email_hash!
+		self.email_hash = Digest::MD5.hexdigest(self.email)
+		self.save
+	end
+
 	# a convenience method for getting the admin users's full name
 	def full_name
 		if self.last_name
