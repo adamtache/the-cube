@@ -28,7 +28,6 @@ ActiveAdmin.register Post do
 			"&#x2713;".html_safe if p.pinned?
 		end
 		column :heading
-		column :html_content
 		column :author do |p|
 			link_to p.author.full_name, admin_admin_user_path(p.author) if p.author && p.author.full_name
 		end
@@ -48,7 +47,7 @@ ActiveAdmin.register Post do
 				"&#x2713;".html_safe if p.pinned?
 			end
 			row :heading
-			row :html_content
+			row :markdown_content
 			row :author do
 				link_to p.author.full_name, admin_admin_user_path(p.author) if p.author && p.author.full_name
 			end
