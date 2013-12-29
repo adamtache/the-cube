@@ -46,3 +46,4 @@ end
 
 # markdown parsing for posts
 gem 'bluecloth'
+gem 'activeadmin_pagedown'

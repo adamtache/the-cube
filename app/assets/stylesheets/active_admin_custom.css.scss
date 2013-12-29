@@ -1,0 +1,12 @@
+.wmd-panel {
+	margin-left: 0;
+	margin-right: 0;
+	width: calc(80% - 22px);
+}
+
+.wmd-preview {
+	background-color: white;
+	border: 1px solid #999;
+	padding: 22px;
+	@include box-sizing(border-box);
+}

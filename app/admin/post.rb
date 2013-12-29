@@ -13,10 +13,12 @@ ActiveAdmin.register Post do
 		f.inputs "Details" do
 			f.input :pinned
 			f.input :heading
-			f.input :markdown_content, :label => "Content"
-			f.input :admin_user_id, :as => :hidden, :value => current_admin_user.id
 			f.input :companies, :as => :check_boxes
 			f.input :members, :as => :check_boxes
+		end
+		f.inputs "Content &nbsp;&nbsp;(use <a href='http://daringfireball.net/projects/markdown/syntax'>markdown</a>)" do
+			f.input :markdown_content, :label => "Content", :as => :pagedown_text
+			f.input :admin_user_id, :as => :hidden, :value => current_admin_user.id
 		end
 		f.actions
 	end
