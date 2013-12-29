@@ -47,7 +47,9 @@ ActiveAdmin.register Post do
 				"&#x2713;".html_safe if p.pinned?
 			end
 			row :heading
-			row :markdown_content
+			row :content do 
+				p.markdown_content.gsub("\n", "<br/>").html_safe
+			end
 			row :author do
 				link_to p.author.full_name, admin_admin_user_path(p.author) if p.author && p.author.full_name
 			end

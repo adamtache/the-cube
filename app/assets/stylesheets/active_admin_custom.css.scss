@@ -2,6 +2,11 @@
 	margin-left: 0;
 	margin-right: 0;
 	width: calc(80% - 22px);
+	.wmd-input {
+		font-family: "Courier New", "mono";
+		font-weight: 600;
+		font-size: 12px;
+	}
 }
 
 .wmd-preview {
