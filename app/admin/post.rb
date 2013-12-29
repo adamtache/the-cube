@@ -13,7 +13,7 @@ ActiveAdmin.register Post do
 		f.inputs "Details" do
 			f.input :pinned
 			f.input :heading
-			f.input :content
+			f.input :markdown_content, :label => "Content"
 			f.input :admin_user_id, :as => :hidden, :value => current_admin_user.id
 			f.input :companies, :as => :check_boxes
 			f.input :members, :as => :check_boxes
@@ -26,7 +26,7 @@ ActiveAdmin.register Post do
 			"&#x2713;".html_safe if p.pinned?
 		end
 		column :heading
-		column :content
+		column :html_content
 		column :author do |p|
 			link_to p.author.full_name, admin_admin_user_path(p.author) if p.author && p.author.full_name
 		end
@@ -46,7 +46,7 @@ ActiveAdmin.register Post do
 				"&#x2713;".html_safe if p.pinned?
 			end
 			row :heading
-			row :content
+			row :html_content
 			row :author do
 				link_to p.author.full_name, admin_admin_user_path(p.author) if p.author && p.author.full_name
 			end

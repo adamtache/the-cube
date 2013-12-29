@@ -1,3 +1,5 @@
+require "bluecloth"
+
 class Post < ActiveRecord::Base
 	include ActionView::Helpers::DateHelper
 
@@ -8,11 +10,11 @@ class Post < ActiveRecord::Base
 
 	# == validations
 	validates :heading, presence: true
-	validates :content, presence: true
+	validates :markdown_content, presence: true
 	validates :author, presence: true
 
 	# == callbacks
-	before_save :auto_titleize
+	before_save :auto_titleize, :compile_content
 
 	# == scopes
 	default_scope order("pinned desc, updated_at desc")
@@ -20,6 +22,15 @@ class Post < ActiveRecord::Base
 	# == methods
 	def auto_titleize
 		self.heading = self.heading.titleize
+	end
+
+	def compile_content
+		self.html_content = BlueCloth.new(self.markdown_content).to_html
+	end
+
+	def compile_content!
+		self.html_content = BlueCloth.new(self.markdown_content).to_html
+		self.save
 	end
 
 	def tags

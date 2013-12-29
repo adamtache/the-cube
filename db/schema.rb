@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131228221200) do
+ActiveRecord::Schema.define(version: 20131229012234) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -92,11 +92,12 @@ ActiveRecord::Schema.define(version: 20131228221200) do
 
   create_table "posts", force: true do |t|
     t.string   "heading"
-    t.text     "content"
+    t.text     "markdown_content"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "admin_user_id"
-    t.boolean  "pinned",        default: false
+    t.boolean  "pinned",           default: false
+    t.text     "html_content"
   end
 
   add_index "posts", ["admin_user_id"], name: "index_posts_on_admin_user_id"

@@ -10,7 +10,7 @@
 		<%= post.author.full_name %> | <%= post.formatted_date %>
 	</div>
 	<div class="post-body">
-		<%= post.content %>
+		<%= post.html_content.html_safe %>
 	</div>
 	<div class="post-tags">
 		<span>Tags: </span>
