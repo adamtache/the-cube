@@ -9,9 +9,6 @@
 	<div class="post-author-time">
 		<%= post.author.full_name %> | <%= post.formatted_date %>
 	</div>
-	<div class="post-body">
-		<%= post.html_content.html_safe %>
-	</div>
 	<div class="post-tags">
 		<span>Tags: </span>
 		<% post.tags.each do |t| %>
@@ -21,5 +18,8 @@
 				</span>
 			<% end %>
 		<% end %> 
+	</div>
+	<div class="post-body">
+		<%= post.html_content.html_safe %>
 	</div>
 </div>
