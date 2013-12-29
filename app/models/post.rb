@@ -17,7 +17,7 @@ class Post < ActiveRecord::Base
 	before_save :auto_titleize, :compile_content
 
 	# == scopes
-	default_scope order("pinned desc, updated_at desc")
+	default_scope order("pinned desc, created_at desc")
 
 	# == methods
 	def auto_titleize
