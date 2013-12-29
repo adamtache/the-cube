@@ -45,5 +45,19 @@
 				margin-top: 10px;
 			}
 		}
+		.post-tags {
+			a {
+				text-decoration: none;
+			}
+			margin-top: 10px;
+			.post-tag {
+				background-color: $light-blue;
+				margin-right: 5px;
+				&:hover {
+					text-decoration: none;
+					background-color: darken($light-blue, 8%);
+				}
+			}
+		}
 	}
 }

@@ -1,32 +1,9 @@
 <%= render "header_image" %>
 
 <div class="content-posts">
-	<div class="content-post">
-		<div class="pinned">Pinned Post</div>
-		<div class="post-title">
-			<img src="https://secure.gravatar.com/avatar/1384686ecd2b5e4ea72972f843cd0811?size=800">
-			<h1>The Cube's Rush 2014 Events Calendar Is Out!</h1>
-		</div>
-		<div class="post-author-time">
-			Ashley Qian | December 24, 2013
-		</div>
-		<div class="post-body">
-			Get ready for 3 weeks of shenannigans, innovation and creativity! We have some pretty awesome events lined up for all you prospective Cubesters!
-			<%= image_tag "calendar.jpg" %>
-		</div>
-	</div>
-	<div class="content-post">
-		<div class="post-title">
-			<img src="https://secure.gravatar.com/avatar/1384686ecd2b5e4ea72972f843cd0811?size=800">
-			<h1>The Cube’s Rush Process: Demystified</h1>
-		</div>
-		<div class="post-author-time">
-			Ashley Qian | December 26, 2013
-		</div>
-		<div class="post-body">
-			Ever wonder what the rush process is like?
-		</div>
-	</div>
+	<% Post.all.limit(10).each do |p| %>
+		<%= render p %>
+	<% end %>
 </div>
 <div class="content-sidebar">
 	<div class="sidebar-widget">
