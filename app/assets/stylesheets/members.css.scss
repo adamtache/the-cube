@@ -1,0 +1,27 @@
+.content-members {
+	padding: 20px;
+	border-bottom: 1px solid $grey;
+	.content-member {
+		padding: 20px;
+		.member-photo {
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+		.member-profile {
+			font-weight: 100;
+			font-size: 14px;
+			padding: 20px;
+			margin-top: -5px;
+			border-bottom: 1px solid $grey;
+			border-left: 1px solid $grey;
+			border-right: 1px solid $grey;
+			.profile-companies {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+}

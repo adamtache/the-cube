@@ -1,72 +1,96 @@
-<div class="content">
-	<%= render "header_image" %>
-	<div class="content-mission">
-		<div class="mission-hero">
-			The Cube is a Duke's student-run, enterpreneurial residential community who yearn to make a difference, are driven to execute upon and deliver great ideas and dedicate themselves to learning and growing.	
-		</div>
-		<div class="mission-title">
-			<h1>What do we expect from our members?</h1>
-		</div>
-		<div class="mission-body">
-			<ol>
-				<li>
-					Produce a product or service that is iterable and can be brought to the general market, whether via non-profit or for-profit venture. The Cube is also dedicated to promoting entrepreneurship of any form within the community and on Duke’s campus, including social ventures.
-				</li>
-				<li>
-					Timeline for development:
-					<ol>
-						<li>
-							Within the first year following a member’s induction, they are expected to work to produce a product or venture.
-						</li>
-						<li>
-							Within a member’s time in The Cube, they are expected to launch at least 1 product or venture
-						</li>
-					</ol>
-				</li>
-			</ol>
-		</div>		
+<%= render "header_image" %>
+<div class="content-mission" id="mission">
+	<div class="mission-hero">
+		The Cube is a Duke's student-run, enterpreneurial residential community who yearn to make a difference, are driven to execute upon and deliver great ideas and dedicate themselves to learning and growing.	
 	</div>
-	<div class="content-members">
-		<div class="content-member col-xs-6 col-sm-6 col-md-4 col-lg-3">
+	<div class="mission-title">
+		<h1>What do we expect from our members?</h1>
+	</div>
+	<div class="mission-body">
+		<ol>
+			<li>
+				Produce a product or service that is iterable and can be brought to the general market, whether via non-profit or for-profit venture. The Cube is also dedicated to promoting entrepreneurship of any form within the community and on Duke’s campus, including social ventures.
+			</li>
+			<li>
+				Timeline for development:
+				<ol>
+					<li>
+						Within the first year following a member’s induction, they are expected to work to produce a product or venture.
+					</li>
+					<li>
+						Within a member’s time in The Cube, they are expected to launch at least 1 product or venture
+					</li>
+				</ol>
+			</li>
+		</ol>
+	</div>		
+</div>
+<div class="content-members clearfix" id="members">
+	<div class="content-member col-sm-6 col-md-4 col-lg-3">
+		<div class="thumbnail">
 			<div class="member-photo">
 				<%= image_tag "josh.jpg" %>
 			</div>
-			<div class="member-profile">
+			<div class="member-profile caption">
 				<div class="profile-name">
 					<h1>Josh Miller</h1>
 				</div>
-				<div class="profile-positions">
-					Founder and CEO of Skillgrabber | Founder of LaceWing Labs
+				<div class="profile-companies">
+					Skillgrabber | LaceWing Labs
 				</div>
 				<div class="profile-blurb">
 				</div>
 			</div>
 		</div>
-		<div class="content-member col-xs-6 col-sm-6 col-md-4 col-lg-3">
+	</div>
+	<div class="content-member col-sm-6 col-md-4 col-lg-3">
+		<div class="thumbnail">
 			<div class="member-photo">
 				<img src="https://secure.gravatar.com/avatar/1384686ecd2b5e4ea72972f843cd0811?size=800">
 			</div>
-			<div class="member-profile">
+			<div class="member-profile caption">
 				<div class="profile-name">
 					<h1>Ashley Qian</h1>
 				</div>
-				<div class="profile-positions">
-					Co-Founder of HandCultured | Vice President & CMO of Brackets4Life
+				<div class="profile-companies">
+					Brackets4Life
+				</div>
+				<div class="profile-blurb">
+				</div>
+			</div>
+
+		</div>
+		
+	</div>
+	<div class="content-member col-sm-6 col-md-4 col-lg-3">
+		<div class="thumbnail">
+			<div class="member-photo">
+				<%= image_tag "kirill.jpg" %>
+			</div>
+			<div class="member-profile caption">
+				<div class="profile-name">
+					<h1>Kirill Klimuk</h1>
+				</div>
+				<div class="profile-companies">
+					Campaign Compass
 				</div>
 				<div class="profile-blurb">
 				</div>
 			</div>
 		</div>
-		<div class="content-member col-xs-6 col-sm-6 col-md-4 col-lg-3">
+		
+	</div>
+	<div class="content-member col-sm-6 col-md-4 col-lg-3">
+		<div class="thumbnail">
 			<div class="member-photo">
-				<%= image_tag "kirill.jpg" %>
+				<%= image_tag "fabio.jpg" %>
 			</div>
-			<div class="member-profile">
+			<div class="member-profile caption">
 				<div class="profile-name">
-					<h1>Kirill Klimuk</h1>
+					<h1>Fabio Berger</h1>
 				</div>
-				<div class="profile-positions">
-					Founder and CEO of Skillgrabber | Founder of LaceWing Labs
+				<div class="profile-companies">
+					Wealthlift | Dubbit
 				</div>
 				<div class="profile-blurb">
 				</div>
@@ -74,17 +98,55 @@
 		</div>
 	</div>
 </div>
-<div class="content-members">
+<div class="content-companies clearfix" id="companies">
+	<div class="content-company clearfix col-lg-6">
+		<div class="thumbnail">
+			<div class="pull-left">
+				<div class="company-logo">
+					<%= image_tag "dubbit.jpg" %>
+				</div>
+			</div>
+			<div class="company-profile clearfix">
+				<div class="company-name">
+					<h1>Dubbit</h1>
+				</div>
+				<div class="company-members">
+					Fabio Berger
+				</div>
+				<div class="company-status">
+				</div>
+				<div class="company-description">
+					Create skits and animations to send to friends. Just drag a character in, click record to voice over and move your characters. What can you create in 30 seconds of animation?
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="content-company clearfix col-lg-6">
+		<div class="thumbnail">
+			<div class="pull-left">
+				<div class="company-logo">
+					<%= image_tag "turnout.jpg" %>
+				</div>
+			</div>
+
+			<div class="company-profile clearfix">
+				<div class="company-name">
+					<h1>Turnout</h1>
+				</div>
+				<div class="company-members">
+					Alex Browne
+				</div>
+				<div class="company-status">
+				</div>
+				<div class="company-description">
+					Increase your conversions with the power of real-time demographic data.
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="content-alumni" id="alumni">
 
 </div>
-<div class="content-companies">
-
-</div>
-<div class="content-alumni">
-
-</div>
-<div class="content-special-thanks">
-
-</div>
-
-
+<div class="content-special-thanks" id="special-thanks">

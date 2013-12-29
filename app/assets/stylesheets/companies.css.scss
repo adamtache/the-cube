@@ -1,0 +1,29 @@
+.content-companies {
+	padding: 20px;
+	border-bottom: 1px solid $grey;
+	.content-company {
+		padding: 20px;
+		.company-logo {
+			margin-right: 20px;
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+		.company-profile {
+			font-weight: 100;
+			font-size: 14px;
+			padding: 20px 20px 0 20px;
+			.company-members {
+				margin-bottom: 10px;
+				font-style: italic;
+			}
+			.company-description {
+				height: 70px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}	
+		}
+	}
+}

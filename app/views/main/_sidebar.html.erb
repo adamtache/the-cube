@@ -9,11 +9,11 @@
 		<li class="<%= 'active' if params[:action] == 'about' %>"><%= link_to "About Us", about_path %></li>
 		<% if  params[:action] == 'about' %>
 		<ul class="submenu">
-			<li class="active"><a href="">Mission</a></li>
-			<li><a href="">Members</a></li>
-			<li><a href="">Companies</a></li>
-			<li><a href="">Alumni</a></li>
-			<li><a href="">Special Thanks</a></li>
+			<li class="active"><a href="#mission">Mission</a></li>
+			<li><a href="#members" >Members</a></li>
+			<li><a href="#companies">Companies</a></li>
+			<li><a href="#alumni">Alumni</a></li>
+			<li><a href="#special-thanks">Special Thanks</a></li>
 		</ul>
 		<% end %>
 		<li class="<%= 'active' if params[:action] == 'join' %>"><%= link_to "Join Us", join_path %></li>
