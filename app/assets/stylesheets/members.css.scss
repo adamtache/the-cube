@@ -4,6 +4,17 @@
 	.content-member {
 		padding: 20px;
 		.member-photo {
+			position: relative;
+			.alumni {
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: $dark-grey;
+				background-color: $grey;
+				padding: 5px;
+				font-size: 10px;
+				text-transform: uppercase;
+			}
 			img {
 				height: 100%;
 				width: 100%;

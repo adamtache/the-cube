@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131229012234) do
+ActiveRecord::Schema.define(version: 20131230200138) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20131229012234) do
     t.string   "email_hash"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "alumni",     default: false
   end
 
   create_table "members_posts", force: true do |t|
