@@ -14,9 +14,28 @@
 			font-weight: 100;
 			font-size: 14px;
 			padding: 20px 20px 0 20px;
+			.company-name {
+				h1 {
+					a {
+						color: $dark-grey;
+						&:hover {
+							text-decoration: none;
+							color: $light-blue;
+						}
+					}
+				}
+			}
 			.company-members {
-				margin-bottom: 10px;
 				font-style: italic;
+				margin-bottom: 10px;
+				a {
+					color: $dark-grey;
+					&:hover {
+						text-decoration: none;
+						color: $light-blue;
+					}
+				}
+				
 			}
 			.company-description {
 				height: 70px;

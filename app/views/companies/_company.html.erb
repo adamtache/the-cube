@@ -1,19 +1,25 @@
 <!-- 
 	This should be a small card-like element that shows some basic info
 	about each company.
- -->
-<div class="content-company card">
-	<div class="company-name">
-		<h3><%= link_to company.name, company %></h3>
+-->
+<div class="content-company clearfix col-lg-6">
+	<div class="thumbnail">
+		<div class="pull-left">
+			<div class="company-logo">
+			</div>
+		</div>
 	</div>
-	<div class="company-blurb">
-		<p>
+	<div class="company-profile clearfix">
+		<div class="company-name">
+			<h1><%= link_to company.name, company %></h1>
+		</div>
+		<div class="company-members">
+			<%= (company.members.map{|m| link_to m.full_name, m}).join(" | ").html_safe %>
+		</div>
+		<div class="company-description">
+			Founded in <%= company.founded_at %>
+			<br/>
 			<%= company.blurb %>
-		</p>
-	</div>
-	<div class="company-info">
-		<strong>Founded:</strong> <%= company.founded_at %>
-		<br/>
-		<strong>Members:</strong> <%= (company.members.map{|m| link_to m.full_name, m}).join(", ").html_safe %>
+		</div>
 	</div>
 </div>

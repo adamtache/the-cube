@@ -1,15 +1,19 @@
 <!-- 
 	This should be a small card-like element that shows some basic info
 	about each member.
- -->
-<div class="content-member card col-xs-6 col-sm-6 col-md-4 col-lg-3">
-	<div class="member-image">
-		<%= image_tag member.profile_image_url(200) %>
-	</div>
-	<div class="member-name">
-		<h3><%= link_to member.full_name, member %></h3>
-	</div>
-	<div class="member-info">
-		<strong>Companies:</strong> <%= (member.companies.map{|c| link_to c.name, c}).join(", ").html_safe %>
+-->
+<div class="content-member col-sm-6 col-md-4 col-lg-3">
+	<div class="thumbnail">
+		<div class="member-photo">
+			<%= image_tag member.profile_image_url(800) %>
+		</div>
+		<div class="member-profile caption">
+			<div class="profile-name">
+				<h1><%= link_to member.full_name, member %></h1>
+			</div>
+			<div class="profile-info">
+				<%= (member.companies.map{|c| link_to c.name, c}).join(" | ").html_safe %>
+			</div>
+		</div>
 	</div>
 </div>

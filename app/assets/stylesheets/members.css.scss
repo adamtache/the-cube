@@ -14,13 +14,28 @@
 			font-size: 14px;
 			padding: 20px;
 			margin-top: -5px;
-			border-bottom: 1px solid $grey;
-			border-left: 1px solid $grey;
-			border-right: 1px solid $grey;
-			.profile-companies {
+			.profile-name {
+				h1 {
+					a {
+						color: $dark-grey;
+						&:hover {
+							text-decoration: none;
+							color: $light-blue;
+						}
+					}
+				}
+			}
+			.profile-info {
 				white-space: nowrap;
 				overflow: hidden;
 				text-overflow: ellipsis;
+				a {
+					color: $dark-grey;
+					&:hover {
+						text-decoration: none;
+						color: $light-blue;
+					}
+				}
 			}
 		}
 	}
