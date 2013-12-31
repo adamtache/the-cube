@@ -47,3 +47,6 @@ end
 # markdown parsing for posts
 gem 'bluecloth'
 gem 'activeadmin_pagedown'
+
+# for validating urls
+gem "validate_url"

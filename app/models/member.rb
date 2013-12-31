@@ -9,6 +9,7 @@ class Member < ActiveRecord::Base
 	validates :first_name, presence: true
 	validates :last_name, presence: true
 	validates :email, presence: true, format: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/
+	validates :personal_site_url, url: {allow_blank: true}
 
 	# == callbacks
 	before_save :auto_format, :compile_email_hash
