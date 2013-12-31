@@ -20,3 +20,18 @@
 .mission-process {
 	font-weight: 100;
 }
+
+@media all and (max-width: 768px) and (min-width: 320px) {
+	.content {
+		margin-left: 0;
+	}
+	.content-join {
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 992px) and (min-width: 768px) {
+	.content-join {
+		width: 100%;
+	}
+}
