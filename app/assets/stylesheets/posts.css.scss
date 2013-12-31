@@ -63,7 +63,7 @@
 				margin-right: 10px;
 				&:hover {
 					text-decoration: none;
-					background-color: darken($light-blue, 8%);
+					background-color: lighten($light-blue, 10%);
 				}
 			}
 		}

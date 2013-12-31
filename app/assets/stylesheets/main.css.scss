@@ -53,7 +53,7 @@ ol {
 				&:hover {
 					// this could be changed, but we def. want to do something
 					// here to hint at the fact that it's a link
-					color: $light-blue;
+					color: lighten($dark-grey, 20%);
 				}
 			}
 		}
@@ -65,8 +65,8 @@ ol {
 				-webkit-font-smoothing: antialiased;
 				color: white;
 			}
-			:hover {
-
+			&:hover {
+				color: white;
 			}
 		}
 	}
@@ -145,9 +145,34 @@ ol {
 			font-family: 'Open Sans', sans-serif;
 			margin: 10px 0;
 			&:hover {
-				background-color: darken($light-blue, 8%) !important;
+				background-color: lighten($light-blue, 10%) !important;
 			}
 		}
+	}
+}
+
+.social {
+	text-align: center;
+	padding: 20px 40px;
+	bottom: 0;
+	button {
+		background-color: $dark-grey;
+		border: none;
+		width: 50px;
+		height: 50px;
+		&:hover {
+			background-color: lighten($dark-grey, 20%);
+		}
+	}
+	.facebook {
+		float: left;
+	}
+	.email {
+		float: right;
+	}
+	img {
+		width: 40px;
+		height: 40px;
 	}
 }
 
