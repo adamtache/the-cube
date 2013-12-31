@@ -10,7 +10,9 @@
 				Alumni
 			</div>
 			<% end %>
-			<%= image_tag member.profile_image_url(800) %>
+			<%= link_to member do %>
+				<%= image_tag member.profile_image_url(800) %>
+			<% end %>
 		</div>
 		<div class="member-profile caption">
 			<div class="profile-name">
