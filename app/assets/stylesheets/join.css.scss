@@ -1,1 +1,22 @@
-// Put css related to the join page here.
+.content-join {
+	float: left;
+	width: 75%;
+	border-right: 1px solid $grey;
+}
+.join-mission {
+	padding: 40px;
+	border-bottom: 1px solid $grey;
+	.mission-hero {
+		background-color: $light-blue;
+		color: white;
+		font-weight: 100;
+		font-size: 24px;
+		padding: 20px;
+		line-height: 1.5em;
+	}
+}
+
+.join-process {
+	padding: 40px;
+	font-weight: 100;
+}

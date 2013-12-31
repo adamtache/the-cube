@@ -1,1 +1,24 @@
-// Put css related to the calendar page here.
+.content-calendar {
+	.calendar-mission {
+		padding: 40px;
+		border-bottom: 1px solid $grey;
+		.mission-hero {
+			background-color: $light-blue;
+			color: white;
+			font-weight: 100;
+			font-size: 24px;
+			padding: 20px;
+			line-height: 1.5em;
+		}
+		.mission-inquiry {
+			font-weight: 100;
+			margin-top: 40px;
+		}
+	}
+	width: 75%;
+	float: left;
+	border-right: 1px solid $grey;
+	.calendar {
+		padding: 40px;
+	}
+}
