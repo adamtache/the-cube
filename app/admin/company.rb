@@ -11,6 +11,7 @@ ActiveAdmin.register Company do
 		f.inputs "Details" do
 			f.input :name
 			f.input :blurb
+			f.input :logo
 			f.input :founded_at
 			f.input :members, :as => :check_boxes
 		end

@@ -1,19 +1,21 @@
-<div class="content-member">
-	<div class="member-image">
-		<%= image_tag @member.profile_image_url(200) %>
-	</div>
-	<div class="member-name">
-		<h1><%= @member.full_name %></h1>
-	</div>
-	<div class="member-info">
-		<strong>Email:</strong> <%= @member.email %>
-		<br/>
-		<strong>Companies:</strong> <%= (@member.companies.map{|c| link_to c.name, c}).join(", ").html_safe %>
+<div class="member">
+	<div class="member-header">
+		<div class="member-image">
+			<%= image_tag @member.profile_image_url(800) %>
+		</div>
+		<div class="member-name">
+			<h1><%= @member.full_name %></h1>
+		</div>
+		<div class="member-info">
+			<%= @member.email %>
+			<br/>
+			<%= (@member.companies.map{|c| link_to c.name, c}).join(" | ").html_safe %>
+		</div>
 	</div>
 	<div class="member-posts">
-		<h2>Latest News</h2>
 		<% @member.posts.each do |p| %>
-			<%= render p %>
+		<%= render p %>
 		<% end %>
 	</div>
 </div>
+

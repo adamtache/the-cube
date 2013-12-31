@@ -22,7 +22,9 @@ ActiveAdmin.register Member do
 		column :first_name
 		column :last_name
 		column :email
-		column :alumni
+		column :alumni do |m|
+			"&#x2713;".html_safe if m.alumni?
+		end
 		column :companies do |m|
 			(m.companies.map{|c| link_to c.name, admin_company_path(c) }).join(',  ').html_safe
 		end

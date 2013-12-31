@@ -6,20 +6,19 @@
 	<div class="thumbnail">
 		<div class="pull-left">
 			<div class="company-logo">
+				<img src="<%= company.logo %>">
 			</div>
 		</div>
-	</div>
-	<div class="company-profile clearfix">
-		<div class="company-name">
-			<h1><%= link_to company.name, company %></h1>
-		</div>
-		<div class="company-members">
-			<%= (company.members.map{|m| link_to m.full_name, m}).join(" | ").html_safe %>
-		</div>
-		<div class="company-description">
-			Founded in <%= company.founded_at %>
-			<br/>
-			<%= company.blurb %>
+		<div class="company-profile clearfix">
+			<div class="company-name">
+				<h1><%= link_to company.name, company %></h1>
+			</div>
+			<div class="company-members">
+				<%= (company.members.map{|m| link_to m.full_name, m}).join(" | ").html_safe %>
+			</div>
+			<div class="company-description">
+				<%= company.blurb %>
+			</div>
 		</div>
 	</div>
 </div>
