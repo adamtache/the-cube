@@ -8,7 +8,11 @@
 		</div>
 		<div class="company-info">
 			Founded on <%= @company.founded_at %>
-			<br>
+			<% if !@company.site_url.blank? %>
+				<br/>
+				<%= link_to @company.site_url, @company.site_url %>
+			<% end %>
+			<br/>
 			<%= (@company.members.map{|m| link_to m.full_name, m}).join(" | ").html_safe %>
 		</div>
 		<div class="company-blurb">

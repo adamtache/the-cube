@@ -13,6 +13,7 @@ ActiveAdmin.register Member do
 			f.input :last_name
 			f.input :email
 			f.input :alumni
+			f.input :personal_site_url, :label => "Personal Site or Blog"
 			f.input :companies, :as => :check_boxes
 		end
 		f.actions
@@ -37,6 +38,7 @@ ActiveAdmin.register Member do
 			row :last_name
 			row :email
 			row :alumni
+			row :personal_site_url
 			row :companies do
 				(m.companies.map{|c| link_to c.name, admin_company_path(c) }).join(',  ').html_safe
 			end

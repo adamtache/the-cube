@@ -8,6 +8,10 @@
 		</div>
 		<div class="member-info">
 			<%= @member.email %>
+			<% if !@member.personal_site_url.blank? %>
+				<br/>
+				<%= link_to @member.personal_site_url, @member.personal_site_url %>
+			<% end %>
 			<br/>
 			<%= (@member.companies.map{|c| link_to c.name, c}).join(" | ").html_safe %>
 		</div>

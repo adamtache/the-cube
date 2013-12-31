@@ -13,6 +13,7 @@ ActiveAdmin.register Company do
 			f.input :blurb
 			f.input :logo
 			f.input :founded_at
+			f.input :site_url, :label => "Company website"
 			f.input :members, :as => :check_boxes
 		end
 		f.actions
@@ -33,6 +34,7 @@ ActiveAdmin.register Company do
 			row :name
 			row :blurb
 			row :founded_at
+			row :site_url
 			row :members do
 				(c.members.map{|m| link_to m.full_name, admin_member_path(m) }).join(',  ').html_safe
 			end
