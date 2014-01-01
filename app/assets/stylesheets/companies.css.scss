@@ -40,7 +40,11 @@
 						color: $light-blue;
 					}
 				}
-				
+			}
+			.company-description {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
 			}
 		}
 	}
@@ -75,6 +79,7 @@
 		}
 		.company-blurb {
 			margin-top: 10px;
+			height: 180px;
 		}
 	}
 }
