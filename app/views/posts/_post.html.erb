@@ -11,13 +11,17 @@
 	</div>
 	<div class="post-tags">
 		<span>Tags: </span>
-		<% post.tags.each do |t| %>
-			<%= link_to t[:url] do %>
-				<span class="label label-primary post-tag">
-					<%= t[:name] %>
-				</span>
+		<% if post.tags.any? %>
+			<% post.tags.each do |t| %>
+				<%= link_to t[:url] do %>
+					<span class="label label-primary post-tag">
+						<%= t[:name] %>
+					</span>
+				<% end %>
 			<% end %>
-		<% end %> 
+		<% else %>
+			<em>none</em>
+		<% end %>
 	</div>
 	<div class="post-body">
 		<%= post.html_content.html_safe %>
