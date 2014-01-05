@@ -19,7 +19,9 @@ $(function(){
     	offsetTop = href === "#" ? 0 : $(href).offset().top;
     	$('html, body').stop().animate({ 
     		scrollTop: offsetTop
-    	}, 300);
+    	}, 300, function() {
+          window.location.hash = href;
+        });
     });
     $(window).scroll(function(){
 	   // Get container scroll position
