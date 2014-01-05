@@ -24,6 +24,11 @@
 	}
 	.content-company {
 		padding: 20px;
+		.thumbnail {
+			&:hover {
+				background-color: $light-grey;
+			}
+		}
 		.company-logo {
 			position: relative;
 			margin-right: 20px;

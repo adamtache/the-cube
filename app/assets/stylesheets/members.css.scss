@@ -3,6 +3,11 @@
 	border-bottom: 1px solid $grey;
 	.content-member {
 		padding: 20px;
+		.thumbnail {
+			&:hover {
+				background-color: $light-grey;
+			}
+		}
 		.member-photo {
 			position: relative;
 			img {
