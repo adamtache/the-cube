@@ -249,3 +249,16 @@ ol {
 		width: 0;
 	}
 }
+
+@media all and (max-height: 768px) {
+	.sidebar {
+		ul {
+			li {
+				padding: 10px 40px;
+			}
+		}
+	}
+	.social {
+		padding: 20px 40px;
+	}
+}
