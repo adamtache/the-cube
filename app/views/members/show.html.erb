@@ -22,8 +22,14 @@
 		</div>
 	</div>
 	<div class="member-posts">
-		<% @member.posts.each do |p| %>
-		<%= render p %>
+		<% if @member.posts.any? %>
+			<% @member.posts.each do |p| %>
+				<%= render p %>
+			<% end %>
+		<% else %>
+			<div class="no-posts">
+				No recent posts for this member.
+			</div>
 		<% end %>
 	</div>
 </div>

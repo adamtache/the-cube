@@ -27,8 +27,14 @@
 		</div>
 	</div>
 	<div class="company-posts">
-		<% @company.posts.each do |p| %>
-		<%= render p %>
+		<% if @company.posts.any? %>
+			<% @company.posts.each do |p| %>
+				<%= render p %>
+			<% end %>
+		<% else %>
+			<div class="no-posts">
+				No recent posts for this company.
+			</div>
 		<% end %>
 	</div>
 </div>
