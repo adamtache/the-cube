@@ -1,6 +1,11 @@
 <div class="company">
 	<div class="company-header">
 		<div class="company-logo">
+			<% if @company.closed? %>
+			<div class="closed">
+				Closed
+			</div>
+			<% end %>
 			<img src="<%= @company.logo %>">
 		</div>
 		<div class="company-name">
@@ -9,8 +14,8 @@
 		<div class="company-info">
 			Founded on <%= @company.founded_at %>
 			<% if !@company.site_url.blank? %>
-				<br/>
-				<%= link_to @company.site_url, @company.site_url %>
+			<br/>
+			<%= link_to @company.site_url, @company.site_url %>
 			<% end %>
 			<br/>
 			<%= (@company.members.map{|m| link_to m.full_name, m}).join(" | ").html_safe %>

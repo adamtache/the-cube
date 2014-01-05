@@ -13,6 +13,7 @@ ActiveAdmin.register Company do
 			f.input :blurb
 			f.input :logo
 			f.input :founded_at
+			f.input :closed
 			f.input :site_url, :label => "Company website"
 			f.input :members, :as => :check_boxes
 		end
@@ -23,6 +24,9 @@ ActiveAdmin.register Company do
 		column :name
 		column :blurb
 		column :founded_at
+		column :closed do |m|
+			"&#x2713;".html_safe if m.closed?
+		end
 		column :members do |c|
 			(c.members.map{|m| link_to m.full_name, admin_member_path(m) }).join(',  ').html_safe
 		end
@@ -34,6 +38,7 @@ ActiveAdmin.register Company do
 			row :name
 			row :blurb
 			row :founded_at
+			row :closed
 			row :site_url
 			row :members do
 				(c.members.map{|m| link_to m.full_name, admin_member_path(m) }).join(',  ').html_safe

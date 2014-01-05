@@ -6,8 +6,13 @@
 	<div class="thumbnail">
 		<div class="pull-left">
 			<div class="company-logo">
+				<% if company.closed? %>
+				<div class="closed">
+					Closed
+				</div>
+				<% end %>
 				<%= link_to company do %>
-					<%= image_tag company.logo %>
+				<%= image_tag company.logo %>
 				<% end %>
 			</div>
 		</div>

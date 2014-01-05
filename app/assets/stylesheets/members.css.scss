@@ -5,16 +5,6 @@
 		padding: 20px;
 		.member-photo {
 			position: relative;
-			.alumni {
-				position: absolute;
-				top: 0;
-				left: 0;
-				color: $dark-grey;
-				background-color: $grey;
-				padding: 5px;
-				font-size: 10px;
-				text-transform: uppercase;
-			}
 			img {
 				height: 100%;
 				width: 100%;
@@ -53,6 +43,17 @@
 	}
 }
 
+.alumni {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: $dark-grey;
+	background-color: $grey;
+	padding: 5px;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
 .member {
 	text-align: center;
 	font-weight: 100;
@@ -61,7 +62,7 @@
 		background-color: $light-grey;
 		border-bottom: 1px solid $grey;
 		position: relative;
-		.member-image {
+		.member-photo {
 			img {
 				height: 150px;
 				width: 150px;
