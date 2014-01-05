@@ -26,7 +26,10 @@
 	</div>		
 </div>
 <div class="content-members clearfix" id="members">
-	<% Member.all.each do |m| %>
+	<% Member.where(alumni: false).all.each do |m| %>
+	<%= render m %>
+	<% end %>
+	<% Member.where(alumni: true).all.each do |m| %>
 	<%= render m %>
 	<% end %>
 </div>
