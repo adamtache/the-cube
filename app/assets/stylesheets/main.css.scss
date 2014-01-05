@@ -81,9 +81,8 @@ ol {
 		background-color: $light-grey !important;
 		border-bottom: 1px solid $grey;
 		a {
-			color: #999999 !important;
-			font-weight: 700 !important;
-			font-style: italic;
+			color: lighten($dark-grey, 14%) !important;
+			font-weight: 600 !important;
 			font-size: 12px !important;
 		}
 	}
@@ -91,8 +90,7 @@ ol {
 		position: relative;
 		background-color: $grey !important;
 		a {
-			font-weight: 800 !important;
-			color: $dark-grey !important;
+			color: darken($dark-grey, 10%) !important;
 		}
 	}
 	.active:before {
