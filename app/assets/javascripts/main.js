@@ -1,28 +1,27 @@
-	$(function(){
-		var pathname = window.location.pathname;
-		// Cache selectors
-		if($(".submenu").is(":visible") && pathname == "/about"){
-			var lastId;
-			menu = $(".submenu");
-			headerHeight = $("ul.submenu > li.active").offset().top + 200;
-	    // All list items
-	    menuItems = menu.find("a");
-	    // Anchors corresponding to menu items
-	    scrollItems = menuItems.map(function(){
-	    	var item = $($(this).attr("href"));
-	    	if (item.length) { return item; }
-	    });
+$(function(){
+	var pathname = window.location.pathname;
+	// Cache selectors
+	if($(".submenu").is(":visible") && pathname == "/about"){
+		var lastId;
+		menu = $(".submenu");
+		headerHeight = 1;
+    // All list items
+    menuItems = menu.find("a");
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+    	var item = $($(this).attr("href"));
+    	if (item.length) { return item; }
+    });
 
-	    menuItems.click(function(e){
-	    	var href = $(this).attr("href"),
-	    	offsetTop = href === "#" ? 0 : $(href).offset().top-headerHeight+1;
-	    	$('html, body').stop().animate({ 
-	    		scrollTop: offsetTop
-	    	}, 300);
-	    	e.preventDefault();
-	    });
-
-	    $(window).scroll(function(){
+    menuItems.click(function(e){
+    	e.preventDefault();
+    	var href = $(this).attr("href"),
+    	offsetTop = href === "#" ? 0 : $(href).offset().top;
+    	$('html, body').stop().animate({ 
+    		scrollTop: offsetTop
+    	}, 300);
+    });
+    $(window).scroll(function(){
 	   // Get container scroll position
 	   var fromTop = $(this).scrollTop()+headerHeight;
 	   
@@ -43,15 +42,15 @@
 	       .end().filter("[href=#"+id+"]").parent().addClass("active");
 	   }                   
 	});
+}
+$(".sidebar-toggle").click(function(){
+	if($(".sidebar").is(':hidden')){
+		$(".sidebar").show();
+		$(".content").css({"margin-left" : "240px"});
 	}
-	$(".sidebar-toggle").click(function(){
-		if($(".sidebar").is(':hidden')){
-			$(".sidebar").show();
-			$(".content").css({"margin-left" : "240px"});
-		}
-		else {
-			$(".sidebar").hide();
-			$(".content").css({"margin-left" : "0px"});
-		}
-	});
+	else {
+		$(".sidebar").hide();
+		$(".content").css({"margin-left" : "0px"});
+	}
+});
 });

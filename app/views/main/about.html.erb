@@ -1,5 +1,5 @@
 <%= render "header_image" %>
-<div class="content-mission" id="mission">
+<div class="content-mission" id="mission" name="mission">
 	<div class="mission-hero">
 		The Cube is Duke's student-run, enterpreneurial residential community who yearn to make a difference, are driven to execute upon and deliver great ideas and dedicate themselves to learning and growing.	
 	</div>
@@ -25,7 +25,8 @@
 		</ol>
 	</div>		
 </div>
-<div class="content-members clearfix" id="members">
+<div class="content-members clearfix" id="members" name="members">
+	<h1 class="section-header">Members</h1>
 	<% Member.where(alumni: false).all.each do |m| %>
 	<%= render m %>
 	<% end %>
@@ -33,12 +34,13 @@
 	<%= render m %>
 	<% end %>
 </div>
-<div class="content-companies clearfix" id="companies">
+<div class="content-companies clearfix" id="companies" name="companies">
+	<h1 class="section-header">Companies</h1>
 	<% Company.all.each do |c| %>
 	<%= render c %>
 	<% end %>
 </div>
-<div class="content-companies clearfix" id="special-thanks">
+<div class="content-companies clearfix" id="special-thanks" name="special-thanks">
 	<div class="mission-hero">
 		The Cube wants to thank all Duke alumni entrepreneurs and Duke faculty and staff for being helpful mentors and supporting us in all that we do. We couldn't have gotten to where we are today without you guys! Here are just a few of those amazing people!	
 	</div>
