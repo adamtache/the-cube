@@ -13,7 +13,7 @@ ActiveAdmin.register Company do
 			f.input :blurb
 			f.input :logo
 			f.input :founded_at
-			f.input :closed
+			f.input :closed, :as => :boolean
 			f.input :site_url, :label => "Company website"
 			f.input :members, :as => :check_boxes
 		end
