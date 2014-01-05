@@ -25,7 +25,7 @@ ol {
 
 .sidebar {
 	height: 100%;
-	width: 240px;
+	width: 240px !important;
 	position: fixed;
 	border-right: 1px solid $grey;
 	ul {
@@ -223,7 +223,7 @@ ol {
 	.content {
 		.header-image {
 			display: relative;
-			button {
+			a {
 				position: absolute;
 				z-index: 10;
 				opacity: 0.75;
@@ -232,7 +232,7 @@ ol {
 					background-color: white; 
 				}
 			}
-			button:hover {
+			a:hover {
 				opacity: 1;
 			}
 			img {
