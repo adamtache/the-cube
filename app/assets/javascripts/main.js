@@ -4,7 +4,7 @@ $(function(){
 	if($(".submenu").is(":visible") && pathname == "/about"){
 		var lastId;
 		menu = $(".submenu");
-		headerHeight = $("ul.submenu > li.active").offset().top + 200;
+		headerHeight = 1;
     // All list items
     menuItems = menu.find("a");
     // Anchors corresponding to menu items
@@ -14,12 +14,12 @@ $(function(){
     });
 
     menuItems.click(function(e){
+      e.preventDefault();
     	var href = $(this).attr("href"),
-    	offsetTop = href === "#" ? 0 : $(href).offset().top-headerHeight+1;
+    	offsetTop = href === "#" ? 0 : $(href).offset().top;
     	$('html, body').stop().animate({ 
     		scrollTop: offsetTop
     	}, 300);
-    	e.preventDefault();
     });
 
     $(window).scroll(function(){
