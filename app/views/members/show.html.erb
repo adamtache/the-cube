@@ -1,5 +1,11 @@
 <div class="member">
 	<div class="member-header">
+		<a class="navbar-toggle sidebar-toggle" data-toggle="collapse" data-target="#sidebar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</a>
 		<div class="member-photo">
 			<% if @member.alumni? %>
 			<div class="alumni">
@@ -14,8 +20,8 @@
 		<div class="member-info">
 			<%= @member.email %>
 			<% if !@member.personal_site_url.blank? %>
-				<br/>
-				<%= link_to @member.personal_site_url, @member.personal_site_url %>
+			<br/>
+			<%= link_to @member.personal_site_url, @member.personal_site_url %>
 			<% end %>
 			<br/>
 			<%= (@member.companies.map{|c| link_to c.name, c}).join(" | ").html_safe %>
@@ -23,13 +29,13 @@
 	</div>
 	<div class="member-posts">
 		<% if @member.posts.any? %>
-			<% @member.posts.each do |p| %>
-				<%= render p %>
-			<% end %>
+		<% @member.posts.each do |p| %>
+		<%= render p %>
+		<% end %>
 		<% else %>
-			<div class="no-posts">
-				No recent posts for this member.
-			</div>
+		<div class="no-posts">
+			No recent posts for this member.
+		</div>
 		<% end %>
 	</div>
 </div>

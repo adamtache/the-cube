@@ -68,9 +68,13 @@
 		border-bottom: 1px solid $grey;
 		position: relative;
 		.member-photo {
+			position: relative;
+			height: 180px;
+			width: 180px;
+			margin: auto;
 			img {
-				height: 150px;
-				width: 150px;
+				height: 180px;
+				width: 180px;
 			}
 		}
 		.member-name {
@@ -148,4 +152,24 @@
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
 	border-top: 20px solid $light-grey;
+}
+
+@media all and (max-width: 768px) and (min-width: 320px) {
+	.member-header{
+		position: relative;
+		.sidebar-toggle {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 10;
+			opacity: 0.75;
+			margin-left: 5px;
+			.icon-bar {
+				background-color: $dark-grey; 
+			}
+		}
+		.sidebar-toggle:hover {
+			opacity: 1;
+		}
+	}
 }
