@@ -18,9 +18,6 @@
 			<div class="profile-name">
 				<h1><%= link_to member.full_name, member %></h1>
 			</div>
-			<div class="profile-alumni">
-
-			</div>
 			<div class="profile-info">
 				<%= (member.companies.map{|c| link_to c.name, c}).join(" | ").html_safe %>
 			</div>

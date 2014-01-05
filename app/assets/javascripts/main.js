@@ -5,6 +5,7 @@ $(function(){
 		if (stripped_url.length > 1 ){
 			anchor_value = stripped_url[1];
 		}
+		$('body').scrollspy({ target: '.navbar-example' })
 		$("ul.submenu > li.active").removeClass("active");
 		$("a[href$='#" + anchor_value + "']").parent().addClass("active");
 		$("#" + anchor_value).ScrollTo();
