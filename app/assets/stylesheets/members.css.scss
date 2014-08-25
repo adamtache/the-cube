@@ -21,6 +21,8 @@
 			font-size: 14px;
 			padding: 20px 20px 0 20px;
 			.profile-name {
+				text-overflow: ellipsis;
+				overflow: hidden;
 				h1 {
 					a {
 						color: $dark-grey;
@@ -169,5 +171,23 @@
 		.sidebar-toggle:hover {
 			opacity: 1;
 		}
+	}
+}
+
+@media all and (max-width: 480px) and (min-width: 320px) {
+	.content-member {
+		.thumbnail {
+			.pull-left {
+				width: 100%;
+			}
+		}
+	}
+	.member-photo {
+		clear: left;
+		margin: 0 !important;
+	}
+	.member-profile {
+		clear: left;
+		text-align: center;
 	}
 }

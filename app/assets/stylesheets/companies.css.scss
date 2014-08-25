@@ -35,6 +35,8 @@
 			img {
 				height: 180px;
 				width: 180px;
+				display: block;
+				margin: 0 auto;
 			}
 		}
 		.company-profile {
@@ -181,6 +183,7 @@
 	}
 	.company-profile {
 		clear: left;
+		text-align: center;
 	}
 }
 
