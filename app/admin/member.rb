@@ -12,6 +12,7 @@ ActiveAdmin.register Member do
 			f.input :first_name
 			f.input :last_name
 			f.input :email
+			f.input :profile_picture_url
 			f.input :alumni
 			f.input :personal_site_url, :label => "Personal Site or Blog"
 			f.input :companies, :as => :check_boxes
@@ -37,6 +38,7 @@ ActiveAdmin.register Member do
 			row :first_name
 			row :last_name
 			row :email
+			row :profile_picture_url
 			row :alumni
 			row :personal_site_url
 			row :companies do

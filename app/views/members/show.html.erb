@@ -12,7 +12,11 @@
 				Alumni
 			</div>
 			<% end %>
+			<% if member.profile_picture_url != nil %>
+			<%= image_tag member.profile_picture_url %>
+			<% else %>
 			<%= image_tag @member.profile_image_url(800) %>
+			<% end %>
 		</div>
 		<div class="member-name">
 			<h1><%= @member.full_name %></h1>
