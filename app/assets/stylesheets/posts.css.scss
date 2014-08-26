@@ -59,11 +59,13 @@
 			margin-top: 10px;
 			margin-bottom: 10px;
 			.post-tag {
-				background-color: $light-blue;
+				background-color: white;
+				color: $light-blue;
 				margin-right: 10px;
 				&:hover {
 					text-decoration: none;
 					background-color: lighten($light-blue, 10%);
+					color: white;
 				}
 			}
 		}
