@@ -15,15 +15,14 @@
 			<img src="<%= @company.logo %>">
 		</div>
 		<div class="company-name">
+			<% if !@company.site_url.blank? %>
 			<h1><%= @company.name %></h1>
+			<% else %>
+			<h1><%= link_to @company.name, @company.site_url %></h1>
+			<% end %>
 		</div>
 		<div class="company-info">
-			Founded on <%= @company.founded_at %>
-			<% if !@company.site_url.blank? %>
-			<br/>
-			<%= link_to @company.site_url, @company.site_url %>
-			<% end %>
-			<br/>
+			<!-- Founded on <%= @company.founded_at %> -->
 			<%= (@company.members.map{|m| link_to m.full_name, m}).join(" | ").html_safe %>
 		</div>
 		<div class="company-blurb">

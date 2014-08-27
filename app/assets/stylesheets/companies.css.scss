@@ -88,6 +88,14 @@
 		position: relative;
 		.company-name {
 			margin-top: 10px;
+			a {
+				color: $dark-grey;
+				text-decoration: none;
+				&:hover {
+					color: $light-blue;
+					text-decoration: none;
+				} 
+			}
 		}
 		.company-logo {
 			height: 180px;
